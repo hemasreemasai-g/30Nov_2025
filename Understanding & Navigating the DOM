@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Understanding</title>
+</head>
+<body>
+
+<h1 id="mainHeading">Hello!</h1>
+
+<p>Paragraph 1</p>
+<p>Paragraph 2</p>
+<p>Paragraph 3</p>
+
+<div class="container">This is a container div</div>
+
+<script>
+// 1. Change h1 text
+document.getElementById("mainHeading").textContent = "Welcome to the DOM World!";
+
+// 2. Make all <p> blue
+let paras = document.getElementsByTagName("p");
+for (let p of paras) {
+    p.style.color = "blue";
+}
+
+// 3. Change background of first .container div
+document.querySelector(".container").style.backgroundColor = "yellow";
+</script>
+
+</body>
+</html>
